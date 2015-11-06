@@ -1,0 +1,41 @@
+$def with (content)
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title> CodeCrammers - $content.title</title>
+
+	$if content.cssfiles:
+		$for f in content.cssfiles.split(): 
+			<link rel= "stylesheet" href = "$f" type = "text/css"  media = "screen" charset = "utf-8"/>
+
+</head>
+
+<body>
+	
+	<div> <!-- Header -->
+		
+		<div id = "HeadingImage"> <!-- HeadingImage -->
+		
+		</div>
+		
+		<div id = "MenuBar"> <!-- MenuBar-->
+			<div class = "linktextcontainer">
+				<a class = "link" href = "/codecrammers"> home[]=</a>
+				<a class = "link" href = "/codecrammers/archive"> { archives, </a>
+				<a class = "link" href = "/codecrammers/forum"> forum, </a>
+				<a class = "link" href = "/codecrammers/links"> links, </a>
+				<a class = "link" href = "/codecrammers/contact"> contact } </a>
+			</div>
+		</div>
+		
+	</div>
+
+<div id = "main_wrapper"> <!-- Main_Wrapper -->
+$:content
+<div>
+
+</body>
+
+
+</html>

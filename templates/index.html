@@ -1,0 +1,16 @@
+$def with (content)
+$var cssfiles: /static/maincss.css 
+$var title: homepage
+
+$if content[0]:
+	<h1>$:content[0]</h1>
+
+$else:
+	<h1>Code Crammers</h1>
+
+$for i in range(3):
+	<h2>$:content[1][i][0]</h2>
+
+	<h3>$:content[1][i][1]</h3>
+
+	<div id = "Text">$:content[1][i][2]</div>
